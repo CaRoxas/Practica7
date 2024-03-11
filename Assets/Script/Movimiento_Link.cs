@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class Movimiento_Link : MonoBehaviour
 {
+    //VALORES
     float velocidad = 3f;
     float giro = 300f;
 
+    //CONTROLADORES PERSONAJE
+    Rigidbody rb;
     CharacterController controlador;
     Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         controlador = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
     }

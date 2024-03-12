@@ -32,7 +32,14 @@ public class Movimiento_Link : MonoBehaviour
         Vector3 movimiento = transform.forward * movy;
         controlador.Move(movimiento * velocidad * Time.deltaTime);
 
-        //animator.SetFloat("", movy);
-        //animator.SetFloat("", movy);
+        //El Input.GetAxis va de 0 a 1 entonces siendo 0 está moviendo/pulsando y 1 es cuando se deja de mover/pulsar
+        if (movy > 0)
+        {
+            animator.SetBool("Campando",false);
+        }
+        else
+        {
+            animator.SetBool("Campando", true);
+        }
     }
 }

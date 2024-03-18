@@ -23,14 +23,14 @@ public class Puerta : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     private void OnCollisionEnter(Collision collision)
     {
       if (collision.gameObject == Link)
         {
             animator.SetBool("Abierta", true);
-            Pasadoor.GetComponent<BoxCollider>().enabled = true;
+            Pasadoor.GetComponent<BoxCollider>().enabled = false;
         }
     }
 }
